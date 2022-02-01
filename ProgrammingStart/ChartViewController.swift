@@ -90,11 +90,13 @@ class ChartViewController: UIViewController {
         bottomLabel(uiView, deathsCount, 1.69, 85, text: "2222222", size: 30, weight: .bold, color: colors.bluePurple)
         
         view.backgroundColor = .systemGroupedBackground
+        print("通過1")
         
         for i in 0..<CovidSingleton.shared.prefecture.count {
             if CovidSingleton.shared.prefecture[i].name_ja == "東京" {
                 prefecture.text = CovidSingleton.shared.prefecture[i].name_ja
                 pcrCount.text = "\(CovidSingleton.shared.prefecture[i].pcr)"
+                print("pcrCount.text : \(CovidSingleton.shared.prefecture[i].pcr)")
                 casesCount.text = "\(CovidSingleton.shared.prefecture[i].cases)"
                 deathsCount.text = "\(CovidSingleton.shared.prefecture[i].deaths)"
             }
@@ -129,7 +131,6 @@ class ChartViewController: UIViewController {
     func dataSet() {
         var names:[String] = []
         for i in 0...9 {
-            print("i : \(i)")
             names += ["\(self.array[i].name_ja)"]
         }
         chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: names)
@@ -174,7 +175,7 @@ class ChartViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @objc func goCircle() {
-        print("tappedNextButton")
+        performSegue(withIdentifier: "goCircle", sender: nil)
     }
     
     func bottomLabel(_ parentView: UIView, _ label: UILabel, _ x: CGFloat, _ y: CGFloat, text: String, size: CGFloat, weight: UIFont.Weight, color: UIColor) {
@@ -187,8 +188,6 @@ class ChartViewController: UIViewController {
         label.frame = CGRect(x: 0, y: y, width: parentView.frame.size.width / 3.5, height: 50)
         label.center.x = view.center.x * x - 10
         parentView.addSubview(label)
-        
-        
     }
 }
 
