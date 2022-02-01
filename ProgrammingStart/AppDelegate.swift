@@ -5,17 +5,28 @@
 //  Created by g002270 on 2022/01/29.
 //
 
-import UIKit
 
-//@main
+import UIKit
+//import Firebase
+//import FirebaseFirestore
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // FirebaseApp.configure() 【←なぞ。突然出てきた Firebase】
+//        FirebaseApp.configure()
+//        Firestore.firestore().collection("users").document("Message").setData([
+//            "UserMessage": "message",
+//            "Date": "messageDate",
+//            "UserId": "messageId"
+//        ],merge: false) { err in
+//            if let err = err {
+//                print("Error writing documet: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
         CovidAPI.getPrefecture(completion: {(result: [CovidInfo.Prefecture]) -> Void in
             CovidSingleton.shared.prefecture = result
         })
