@@ -22,6 +22,8 @@
 		5CB334AE27A64A1C00A91F68 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB334AD27A64A1C00A91F68 /* API.swift */; };
 		5CB334B027A68B7500A91F68 /* HealthCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB334AF27A68B7500A91F68 /* HealthCheckViewController.swift */; };
 		5CB334B227A787A000A91F68 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB334B127A787A000A91F68 /* ChartViewController.swift */; };
+		5CB334B427A8B4FD00A91F68 /* CircleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB334B327A8B4FD00A91F68 /* CircleChartViewController.swift */; };
+		5CB334B627A8BBF300A91F68 /* CovidSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB334B527A8BBF300A91F68 /* CovidSingleton.swift */; };
 		8C93E0EF3239BAF12BE876E1 /* Pods_ProgrammingStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE08BB8645F3E123F38EF99 /* Pods_ProgrammingStart.framework */; };
 		DD8FC742F5AF2FA484F7756D /* Pods_ProgrammingStart_ProgrammingStartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85217329B832A31E7CBC1DD3 /* Pods_ProgrammingStart_ProgrammingStartUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		5CB334AD27A64A1C00A91F68 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5CB334AF27A68B7500A91F68 /* HealthCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckViewController.swift; sourceTree = "<group>"; };
 		5CB334B127A787A000A91F68 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		5CB334B327A8B4FD00A91F68 /* CircleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartViewController.swift; sourceTree = "<group>"; };
+		5CB334B527A8BBF300A91F68 /* CovidSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidSingleton.swift; sourceTree = "<group>"; };
 		6CD58CCB3611C535DA03B563 /* Pods-ProgrammingStartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgrammingStartTests.debug.xcconfig"; path = "Target Support Files/Pods-ProgrammingStartTests/Pods-ProgrammingStartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85217329B832A31E7CBC1DD3 /* Pods_ProgrammingStart_ProgrammingStartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgrammingStart_ProgrammingStartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9534ABB5AFBEEAD9EC810086 /* Pods-ProgrammingStartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgrammingStartTests.release.xcconfig"; path = "Target Support Files/Pods-ProgrammingStartTests/Pods-ProgrammingStartTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,8 +146,10 @@
 				5CB3347D27A5713D00A91F68 /* ViewController.swift */,
 				5CB334AB27A6495800A91F68 /* Entity.swift */,
 				5CB334AD27A64A1C00A91F68 /* API.swift */,
+				5CB334B527A8BBF300A91F68 /* CovidSingleton.swift */,
 				5CB3347F27A5713D00A91F68 /* Main.storyboard */,
 				5CB334B127A787A000A91F68 /* ChartViewController.swift */,
+				5CB334B327A8B4FD00A91F68 /* CircleChartViewController.swift */,
 				5CB334AF27A68B7500A91F68 /* HealthCheckViewController.swift */,
 				5CB3348227A5713E00A91F68 /* Assets.xcassets */,
 				5CB3348427A5713E00A91F68 /* LaunchScreen.storyboard */,
@@ -423,12 +429,14 @@
 			files = (
 				5CB3347E27A5713D00A91F68 /* ViewController.swift in Sources */,
 				5CB334AC27A6495800A91F68 /* Entity.swift in Sources */,
+				5CB334B427A8B4FD00A91F68 /* CircleChartViewController.swift in Sources */,
 				5CB334B027A68B7500A91F68 /* HealthCheckViewController.swift in Sources */,
 				5CB334AA27A6155D00A91F68 /* Colors.swift in Sources */,
 				5CB3347A27A5713D00A91F68 /* AppDelegate.swift in Sources */,
 				5CB334B227A787A000A91F68 /* ChartViewController.swift in Sources */,
 				5CB334AE27A64A1C00A91F68 /* API.swift in Sources */,
 				5CB3347C27A5713D00A91F68 /* SceneDelegate.swift in Sources */,
+				5CB334B627A8BBF300A91F68 /* CovidSingleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

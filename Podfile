@@ -8,6 +8,7 @@ target 'ProgrammingStart' do
   # Pods for ProgrammingStart
   pod 'FSCalendar'
   pod 'CalculateCalendarLogic'
+  pod 'Charts'
   target 'ProgrammingStartTests' do
     inherit! :search_paths
     # Pods for testing
