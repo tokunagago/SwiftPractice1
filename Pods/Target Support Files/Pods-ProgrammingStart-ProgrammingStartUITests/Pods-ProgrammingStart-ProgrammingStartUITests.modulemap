@@ -1,6 +1,0 @@
-framework module Pods_ProgrammingStart_ProgrammingStartUITests {
-  umbrella header "Pods-ProgrammingStart-ProgrammingStartUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
