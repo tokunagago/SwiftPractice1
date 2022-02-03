@@ -122,7 +122,7 @@ class ViewController: UIViewController {
     }
     
     @objc func chatAction() {
-        print("タップChat")
+        performSegue(withIdentifier: "goChat", sender: nil)
     }
     
     @objc func reloadAction() {
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
     @objc func goChart() {
         performSegue(withIdentifier: "goChart", sender: nil)
     }
-    
+
     func setUpButton(_ title: String, size: CGSize, y: CGFloat, color: UIColor, parentView: UIView) -> UIButton {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)

@@ -17,36 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
 
-        let db = Firestore.firestore()
-        // Add a new document with a generated ID
-        var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-        
-        
-        
-//        FirebaseApp.configure()
-//        Firestore.firestore().collection("users").document("Message").setData([
-//            "UserMessage": "message",
-//            "Date": "messageDate",
-//            "UserId": "messageId"
-//        ],merge: false) { err in
-//            if let err = err {
-//                print("Error writing documet: \(err)")
-//            } else {
-//                print("Document successfully written!")
-//            }
-//        }
-        
         
         CovidAPI.getPrefecture(completion: {(result: [CovidInfo.Prefecture]) -> Void in
             CovidSingleton.shared.prefecture = result

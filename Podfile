@@ -14,6 +14,8 @@ target 'ProgrammingStart' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'MessageKit'
+  pod 'MessageInputBar'
   
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
