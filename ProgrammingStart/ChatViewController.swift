@@ -14,9 +14,35 @@ import FirebaseFirestore
 class ChatViewController: MessagesViewController, /* MessagesDataSource */ MessageCellDelegate, MessagesLayoutDelegate, MessagesDisplayDelegate {
     
     let colors = Colors()
+    private var userId = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        Firestore.firestore().collection("Messages").document().setData([
+            "date": Date(),
+            "senderId": "testId",
+            "text": "testText",
+            "userName": "testName"
+        ])
+        Firestore.firestore().collection("Messages").getDocuments(completion: {
+            (document, error) in
+            if error != nil {
+                print("ChatViewController : Line(\(#line) : error : \(error!)")
+            } else {
+                if let document = document {
+                    for i in 0..<document.count {
+                        print((document.documents[i].get("date")! as! Timestamp).dateValue())
+                        print(document.documents[i].get("senderId")! as! String )
+                        print(document.documents[i].get("text")! as! String )
+                        print(document.documents[i].get("userName")! as! String )
+                    }
+                }
+            }
+        })
 
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+            userId = uuid
+            print("userId : \(userId)")
+        }
         // Do any additional setup after loading the view.
         // messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messageCellDelegate = self
