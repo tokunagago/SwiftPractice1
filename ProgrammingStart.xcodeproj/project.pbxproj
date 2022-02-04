@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DEFCE0AB41E306102204CAB /* Pods_ProgrammingStartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA65E37E587199311BBD195 /* Pods_ProgrammingStartTests.framework */; };
 		5CA809CC27ABF33F00A51211 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA809CB27ABF33F00A51211 /* ChatViewController.swift */; };
+		5CA809CE27AD607A00A51211 /* FirestoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA809CD27AD607A00A51211 /* FirestoreData.swift */; };
 		5CB3347A27A5713D00A91F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3347927A5713D00A91F68 /* AppDelegate.swift */; };
 		5CB3347C27A5713D00A91F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3347B27A5713D00A91F68 /* SceneDelegate.swift */; };
 		5CB3347E27A5713D00A91F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3347D27A5713D00A91F68 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		1FE1E59EB1034DD98D59D393 /* Pods-ProgrammingStart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgrammingStart.debug.xcconfig"; path = "Target Support Files/Pods-ProgrammingStart/Pods-ProgrammingStart.debug.xcconfig"; sourceTree = "<group>"; };
 		4DA65E37E587199311BBD195 /* Pods_ProgrammingStartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgrammingStartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA809CB27ABF33F00A51211 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5CA809CD27AD607A00A51211 /* FirestoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreData.swift; sourceTree = "<group>"; };
 		5CB3347627A5713D00A91F68 /* ProgrammingStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammingStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB3347927A5713D00A91F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CB3347B27A5713D00A91F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				5CB334B527A8BBF300A91F68 /* CovidSingleton.swift */,
 				5CB3347F27A5713D00A91F68 /* Main.storyboard */,
 				5CA809CB27ABF33F00A51211 /* ChatViewController.swift */,
+				5CA809CD27AD607A00A51211 /* FirestoreData.swift */,
 				5CB334B127A787A000A91F68 /* ChartViewController.swift */,
 				5CB334B327A8B4FD00A91F68 /* CircleChartViewController.swift */,
 				5CB334AF27A68B7500A91F68 /* HealthCheckViewController.swift */,
@@ -445,6 +448,7 @@
 				5CB334B027A68B7500A91F68 /* HealthCheckViewController.swift in Sources */,
 				5CB334AA27A6155D00A91F68 /* Colors.swift in Sources */,
 				5CB3347A27A5713D00A91F68 /* AppDelegate.swift in Sources */,
+				5CA809CE27AD607A00A51211 /* FirestoreData.swift in Sources */,
 				5CB334B227A787A000A91F68 /* ChartViewController.swift in Sources */,
 				5CB334AE27A64A1C00A91F68 /* API.swift in Sources */,
 				5CB3347C27A5713D00A91F68 /* SceneDelegate.swift in Sources */,

@@ -14,7 +14,9 @@ import FirebaseFirestore
 class ChatViewController: MessagesViewController, /* MessagesDataSource */ MessageCellDelegate, MessagesLayoutDelegate, MessagesDisplayDelegate {
     
     let colors = Colors()
-    private var userId = ""
+    var userId = ""
+    var firestoreData:[FirestoreData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Firestore.firestore().collection("Messages").document().setData([
@@ -30,10 +32,13 @@ class ChatViewController: MessagesViewController, /* MessagesDataSource */ Messa
             } else {
                 if let document = document {
                     for i in 0..<document.count {
-                        print((document.documents[i].get("date")! as! Timestamp).dateValue())
-                        print(document.documents[i].get("senderId")! as! String )
-                        print(document.documents[i].get("text")! as! String )
-                        print(document.documents[i].get("userName")! as! String )
+                        var storeData = FirestoreData()
+                        storeData.date = (document.documents[i].get("date")! as! Timestamp).dateValue()
+                        storeData.senderId = document.documents[i].get("senderId")! as! String
+                        storeData.text = document.documents[i].get("text")! as! String
+                        storeData.userName = document.documents[i].get("userName")! as! String
+                        self.firestoreData.append(storeData)
+                        print(self.firestoreData)
                     }
                 }
             }
