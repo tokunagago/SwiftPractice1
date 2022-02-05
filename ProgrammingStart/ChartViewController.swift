@@ -70,7 +70,6 @@ class ChartViewController: UIViewController {
         searchBar.tintColor = colors.blue
         view.addSubview(searchBar)
         
-        
         let uiView = UIView()
         uiView.frame = CGRect(x: 10, y: 480, width: view.frame.size.width - 20, height: 167)
         uiView.layer.cornerRadius = 10

@@ -7,6 +7,7 @@
 
 
 import UIKit
+import PKHUD
 
 class ViewController: UIViewController {
     
@@ -89,7 +90,7 @@ class ViewController: UIViewController {
         setUpAPILabel(severe, size: size, centerX: rightX, y: 160, font: font, color: color, parentView)
         setUpAPILabel(death, size: size, centerX: leftX, y: 260, font: font, color: color, parentView)
         setUpAPILabel(discharge, size: size, centerX: rightX, y: 260, font: font, color: color, parentView)
-        
+        HUD.show(.progress, onView: view)
         CovidAPI.getTotal(completion: { (result: CovidInfo.Total) -> Void in
             DispatchQueue.main.async {
                 pcr.text = "\(result.pcr)"
@@ -98,7 +99,10 @@ class ViewController: UIViewController {
                 severe.text = "\(result.severe)"
                 death.text = "\(result.death)"
                 discharge.text = "\(result.discharge)"
+                print("Thread.isMainThread1 : \(Thread.isMainThread)")
+                HUD.hide()
             }
+            print("Thread.isMainThread2 : \(Thread.isMainThread)")
         })
     }
 
