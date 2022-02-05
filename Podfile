@@ -9,6 +9,20 @@ target 'ProgrammingStart' do
   pod 'FSCalendar'
   pod 'CalculateCalendarLogic'
   pod 'Charts'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'MessageKit'
+  pod 'MessageInputBar'
+  pod 'PKHUD' 
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
+  end
+  
   target 'ProgrammingStartTests' do
     inherit! :search_paths
     # Pods for testing
